@@ -17,19 +17,19 @@ public class FindMaxSumSubArray {
 
     }
 
-    private static void findMaxSumSubArray(int[] numArray) {
-        int currMax = 0;
-        int maxSoFar = 0;
+    private static void findMaxSumSubArray(int[] nums) {
+        int currMax = nums[0];
+        int maxSoFar = nums[0];
 
         List<Integer> subArr = new ArrayList<>();
-        for(int i =0; i < numArray.length; i++) {
-            if(numArray[i] + currMax > numArray[i]) {
-                subArr.add(numArray[i]);
-                currMax = numArray[i] + currMax;
+        for(int i =1; i < nums.length; i++) {
+            if(nums[i] + currMax > nums[i]) {
+                subArr.add(nums[i]);
+                currMax = nums[i] + currMax;
             } else {
                 subArr.clear();
-                subArr.add(numArray[i]);
-                currMax = numArray[i];
+                subArr.add(nums[i]);
+                currMax = nums[i];
             }
 
             if(currMax > maxSoFar) {

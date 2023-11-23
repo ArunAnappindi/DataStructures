@@ -87,6 +87,9 @@ public class AddTwoNumbers {
         l2 = l2.next;
         l2.val = 4;
 
-        addTwoNumbers(first, second);
+        //addTwoNumbers(first, second);
+
+        System.out.println(0%2);
+
     }
 }
